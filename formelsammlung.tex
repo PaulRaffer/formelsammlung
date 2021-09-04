@@ -1,0 +1,193 @@
+\documentclass[12pt]{article}
+
+%\usepackage{xcolor}
+%\usepackage{amsmath}
+%usepackage{unicode-math}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{xhfill}
+\DeclareMathSizes{20}{20}{20}{20}
+
+\title{Formelsammlung}
+\author{Paul Raffer}
+\date{2021-09-02}
+
+\begin{document}
+	\maketitle
+	\newpage
+
+	\tableofcontents
+	\newpage
+
+	\section{Mathematik}
+		\subsection{Winkelfunktionen}
+			\begin{center}
+				\begin{tabular}{c|c|c|c}
+					sin & cos & tan & cot \\
+					=  &  =  &  =  &  =  \\
+					G  &  A  &  G  &  A  \\\hline
+					H  &  H  &  A  &  G  \\
+				\end{tabular}
+			\end{center}
+			\begin{alignat*}{5}
+				&sin\ \alpha &&= \frac{G}{H} &&                                  &&\hspace{2em} \alpha &&= arcsin\ \frac{G}{H} \\
+				&cos\ \alpha &&= \frac{A}{H} &&                                  &&\hspace{2em} \alpha &&= arcsin\ \frac{A}{H} \\
+				&tan\ \alpha &&= \frac{G}{A} &&= \frac{sin\ \alpha}{cos\ \alpha} &&\hspace{2em} \alpha &&= arcsin\ \frac{G}{A}
+			\end{alignat*}
+			\begin{alignat*}{2}
+				&H...&&Hypotenuse \\
+				&A...&&Ankathete \\
+				&G...&&Gegenkathete
+			\end{alignat*}
+
+	\section{Physik}
+		\subsection{''Grundgesetze der Mechanik``}
+			\begin{align*}
+				v &= \frac{s}{t} \\
+				a &= \frac{v}{t} \\
+				g &= 9.81\ \frac{m}{s^2} = 9.81\ \frac{N}{kg} \approx 10\ \frac{m}{s^2} \\
+				F &= m * a
+			\end{align*}
+			\begin{alignat*}{4}
+				&t...&&Zeit              &&\ [t] &&= s \\
+				&s...&&Weg               &&\ [s] &&= m \\
+				&m...&&Masse             &&\ [m] &&= kg \\
+				&v...&&Geschwindigkeit   &&\ [v] &&= \frac{[s]}{[t]} = \frac{m}{s} \\
+				&a...&&Beschleungiung    &&\ [a] &&= \frac{[v]}{[t]} = \frac{m}{s^2} = \frac{N}{kg} \\
+				&g...&&Erdbeschleungiung &&\ [g] &&= [a] = \frac{m}{s^2} = \frac{N}{kg} \\
+				&F...&&Kraft             &&\ [F] &&= [m] * [a] = kg * \frac{m}{s^2} = N
+			\end{alignat*}
+		
+		\subsection{Statik}
+			\subsubsection{Hebelgesetz}
+				\begin{align*}
+					M_L &= M_R \\
+					F_L * r_L &= F_R * r_R \\
+					Last * Lastarm &= Kraft * Kraftarm
+				\end{align*}
+				\begin{alignat*}{4}
+					&M_L...&&Linksdrehendes\ Drehmoment  &&\ [M_L] &&= Nm \\
+					&M_R...&&Rechtsdrehendes\ Drehmoment &&\ [M_R] &&= Nm \\
+					&F  ...&&Kraft                       &&\ [F]   &&= N \\
+					&r  ...&&Radius                      &&\ [r]   &&= m
+				\end{alignat*}
+
+			\subsubsection{Gleichgewichtsbedingungen}
+				\begin{align*}
+					\sum M &= 0 \\
+					\sum F &= 0
+				\end{align*}
+				\begin{alignat*}{4}
+					&M...&&Momente &&\ [M] &&= Nm \\
+					&F...&&Kräfte  &&\ [F] &&= N
+				\end{alignat*}
+
+			\subsubsection{Kraftübertragungsverhältnis}
+				\begin{align*}
+					i &= \frac{F}{F_G}
+				\end{align*}
+				\begin{alignat*}{4}
+					&i  ...&&Kraftübertragungsverhältnis &&\ [i]   &&= 1 \\
+					&F  ...&&Kraft                       &&\ [F]   &&= N \\
+					&F_G...&&Last                        &&\ [F_G] &&= N
+				\end{alignat*}
+
+			\subsubsection{Kippsicherheit}
+				\begin{align*}
+					v_K = \frac{\sum M_S}{\sum M_K}
+				\end{align*}
+				\begin{alignat*}{4}
+					&v_K...&&Kippsicherheit &&\ [v_K] &&= 1\\
+					&M_S...&&Standmomente   &&\ [M_S] &&= Nm\\
+					&M_K...&&Kippmomente    &&\ [M_K] &&= Nm
+				\end{alignat*}
+
+		\subsection{Übersetzung}
+			\subsubsection{Drehmomentübersetzung}
+				\begin{align*}
+					i       &= \frac{M_1}{M_2} = \frac{r_1}{r_2} = \frac{d_1}{d_2} = \frac{Z_1}{Z_2} = \frac{\omega_2}{\omega_1} = \frac{n_2}{n_1} \\
+					Seilwinde\ mit\ mehreren\ Stufen:\ i_{ges} &= i_{1/2} * i_{2/3} * ... \\
+					i_{ges} &= \frac{n_{Motor}}{n_2}
+				\end{align*}
+				\begin{alignat*}{4}
+					&i      ...&&Übersetzungsverhältnis &&\ [i]      &&= 1 \\
+					&M      ...&&Drehmoment             &&\ [M]      &&= Nm \\
+					&r      ...&&Radius                 &&\ [r]      &&= m \\
+					&d      ...&&Durchmesser            &&\ [d]      &&= m \\
+					&Z      ...&&Anzahl\ der\ Zahnräder &&\ [Z]      &&= 1 \\
+					&\omega ...&&Winkelgeschwindigkeit  &&\ [\omega] &&= \frac{rad}{s} \\
+					&n      ...&&Drehzahl               &&\ [Z]      &&= \frac{1}{min}
+				\end{alignat*}
+
+		\subsection{Rotation}
+			\begin{align*}
+				%Bahngröße &= Radius * Drehgröße \\
+				%s    &= \phi   * r \\
+				v_u    &= \omega * r \\
+				%a    &= \alpha * r \\
+				\omega &= \frac{\pi * n}{30}
+			\end{align*}
+			\begin{alignat*}{4}
+				&v_u    ...&&Umfanggeschwingigkeit &&\ [i]      &&= \frac{m}{s^2} \\
+				&\omega ...&&Winkelgeschwindigkeit &&\ [\omega] &&= \frac{rad}{s} \\
+				&n      ...&&Drehzahl              &&\ [Z]      &&= \frac{1}{min} \\
+				&30     ...&&Umrechnungsfaktor     &&\          && \\
+				&r      ...&&Radius                &&\ [r]      &&= m
+			\end{alignat*}
+
+		\subsection{Reibung}
+			\begin{align*}
+				F_R = F_N * \mu \\
+				F_N = F_G * cos\ \alpha \\
+				F_N = F_G * sin\ \alpha
+			\end{align*}
+			\begin{alignat*}{4}
+				&F_G    ...&&Gewichtskraft     &&\ [F_G]    &&= N \\
+				&F_N    ...&&Normalkraft       &&\ [F_N]    &&= N \\
+				&F_H    ...&&Hangabtriebskraft &&\ [F_H]    &&= N \\
+				&F_R    ...&&Reibungskraft     &&\ [F_R]    &&= N \\
+				&\alpha ...&&Neigungswinkel    &&\ [\alpha] &&= rad
+			\end{alignat*}
+
+		
+
+		\subsection{Mechanik von Flüssigkeiten}
+			\subsubsection{Das Pascalsche Gesetz}
+				\begin{align*}
+					p &= \frac{F}{A} = const. \\
+					p &= \frac{F_1}{A_1} = \frac{F_2}{A_2} = \frac{F_3}{A_3} = \frac{F_4}{A_4} = ...
+				\end{align*}
+				\begin{alignat*}{4}
+					&F...&&Kraft  &&\ [F] &&= N \\
+					&A...&&Fläche &&\ [A] &&= m^2 \\
+					&p...&&Druck  &&\ [p] &&= \frac{[F]}{[A]} = \frac{N}{m^2} = Pa (Pascal)
+				\end{alignat*}
+				\begin{align*}
+					1\ bar &= 100\ kPa
+				\end{align*}
+		\subsection{Dichte}
+			\begin{align*}
+				\rho &= \frac{m}{V} \\
+				\rho_{H_2O} &= 1\ \frac{kg}{l} = 1\ \frac{kg}{dm^3} = 1000\ \frac{kg}{m^3}
+			\end{align*}
+			\begin{alignat*}{4}
+				&m   ...&&Masse   &&\ [m]    &&= kg \\
+				&V   ...&&Volumen &&\ [V]    &&= m^3 \\
+				&\rho...&&Dichte  &&\ [\rho] &&= \frac{[m]}{[V]} = \frac{kg}{m^3} \\
+				&\rho_{H_2O}...&&Dichte\ von\ Wasser && &&
+			\end{alignat*}
+
+		\subsection{Mechanik von Flüssigkeiten}
+			\subsubsection{Auftrieb}
+				\begin{align*}
+					F_A &= g * m = g * \rho * V
+				\end{align*}
+				\begin{alignat*}{4}
+					&g   ...&&Erdbeschleunigung                      &&\ [g]    &&= \frac{m}{s^2} \\
+					&m   ...&&Masse\ der\ verdrängten\ Flüssigkeit   &&\ [m]    &&= kg \\
+					&V   ...&&Volumen\ der\ verdrängten\ Flüssigkeit &&\ [V]    &&= m^3 \\
+					&\rho...&&Dichte\ der\ Flüssigkeit               &&\ [\rho] &&= \frac{kg}{m^3}\\
+					&F_A ...&&Auftriebskraft                         &&\ [F_A]  &&= N \\
+				\end{alignat*}
+				
+\end{document}
